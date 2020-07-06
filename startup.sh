@@ -50,6 +50,8 @@ ln -s /u01/app/oracle/dbs /u01/app/oracle-product/11.2.0/xe/dbs    #Link db conf
 
 chown -R oracle:dba /u01/app/oracle
 
+sudo -u oracle -i env /u01/app/oracle/product/11.2.0/xe/bin/createdb.sh -dbchar JA16EUC
+
 service oracle-xe start
 
 export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
